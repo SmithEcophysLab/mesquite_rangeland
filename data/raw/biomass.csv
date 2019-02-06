@@ -1,0 +1,218 @@
+plot,(A/U),Species,Weight(g)
+1,A,Solanum e.,0.26
+1,A,DEAD ,14.56
+1,A,Bouteloa g.,4.35
+1,U,Ratabida c.,1.11
+1,u,dead,2.42
+1,a,dead,8.09
+2,A,DEAD ,3.6
+2,U,Bouteloa g.,4.99
+2,U,DEAD ,7.57
+2,A,Guiterrezia s.,0.23
+2,A,DEAD ,1.11
+2,A,Bouteloa g.,0.81
+3,U,Bouteloa g.,1.79
+3,A,Bouteloa g.,1.31
+3,U,Guiterrezia s.,0.24
+3,U,DEAD ,7.85
+3,a,dead ,2.4
+3,a,dead ,0.82
+4,A,Ambrosia p.,0.16
+4,A,DEAD ,7.4
+4,u,dead,3.74
+5,U,Guiterrezia s.,0.16
+5,U,DEAD ,3.68
+5,U,Bouteloa g.,1.07
+5,a,dead,2.91
+5,a,dead,6.43
+5,a,bouteloa ,1.48
+6,A,DEAD ,2.27
+6,a,bouteloa ,4.39
+6,u,dead ,5.36
+6,a,dead ,10.24
+6,a,bouteloa ,1.9
+7,A,Bouteloa g.,9.17
+7,A,DEAD ,8.16
+7,U,DEAD ,2.36
+7,U,Salsosa tragus?,14.63
+7,U,Bouteloa g.,1.92
+7,a,dead,7.97
+8,A,DEAD ,57.93
+8,a,laennecia e. ,1.11
+8,a,dead,0.16
+8,u,bouteloa,31
+8,a,bouteloa ,10.43
+9,A,Chamaesyce l.,0.15
+9,A,Portulaca P.,0.56
+9,A,Bouteloa g.,0.69
+9,A,DEAD ,5.7
+10,u,dead,5.01
+10,u,bouteloa ,4.94
+10,a,dead ,8.23
+11,u,dead,4.28
+11,u,chemaesyle l. ,0.02
+11,u,bouteloa ,0.12
+11,a,dead,5.41
+11,a,guiterrezia s. ,1.59
+11,a,bouteloa ,0.36
+11,u,solanum  ,0.46
+11,u,portulaca p.  ,0.08
+11,a,chamaesyce l.,1.9
+12,U,DEAD ,30.18
+12,U,Bouteloa g.,7
+12,A,DEAD ,15.3
+12,A,Bouteloa g.,9.11
+12,u,bouteloa ,1.49
+12,a,dead,11.9
+13,a,bouteloa,8.05
+13,u,bouteloa,0.18
+13,u,dead,0.44
+13,a,dead,11.24
+14,U,Guiterrezia s.,1.74
+14,A,Bouteloa g.,0.28
+14,A,DEAD ,3.58
+14,u,zinnia ,1.6
+14,u,dead,0.53
+14,u,bouteloa ,0.3
+15,u,bouteloa ,8.37
+15,u,dead,11.47
+15,a,bouteloa ,10.44
+15,a,dead ,29.37
+16,u,bouteloa ,1.54
+16,a,dead,18.65
+16,u,zinnia ,0.24
+16,a,bouteloa ,9.22
+16,u,dead,3.35
+17,a,dead,16.11
+17,u,dead,6.09
+17,u,bouteloa ,2.28
+17,a,boutetloa ,7.86
+18,a,bouteloa ,18.72
+18,u,bouteloa ,5.29
+18,a,bouteloa ,0.25
+18,u,zinnia ,12.93
+18,u,dead ,8.24
+18,a,dead,43.01
+19,U,DEAD,2.28
+19,U,Chamaesyce l.,0.23
+19,a,bouteloa ,4.77
+19,a,chamaesyle L.  ,0.26
+19,a,dead,5.24
+20,a,portulaea p ,0.02
+20,a,chamaesyce I.,0.2
+20,a,solanum ,0.05
+20,a,dead,0.05
+20,u,bouteloa  ,0.02
+20,u,lamecia c. ,11.94
+20,u,chamaesyce,0.62
+20,u,solanum  ,0.49
+20,u,dead ,0.19
+21,a,bouteloa ,6.18
+21,u,dead,3.25
+21,a,dead,20.05
+22,u,bouteloa ,3.45
+22,a,dead ,22.51
+22,u,dead,8.49
+22,a,bouteloa ,20.07
+23,u,dead,2.34
+23,u,bouteloa,1.44
+23,a,solanum ,0.11
+23,a,dead,6.37
+23,a,bouteloa ,0.6
+24,a,bouteloa ,13.74
+24,a,dead,26.44
+24,a,zinnia ,0.41
+24,u,dead ,0.27
+24,u,bouteloa ,3.93
+24,u,solanum  ,0.27
+24,u,guilerrezia,0.15
+25,u,zinnia g.,3.23
+25,u,dead,40.25
+25,u,bouteloa ,14.19
+25,u,solanum ,4.37
+25,a,dead,21.38
+25,a,bouteloa ,11.49
+26,a,bouteloa,7.79
+26,a,dead,12.57
+26,a,solanum,0.18
+26,a,portulaea,0.01
+26,u,bouteloa ,5.21
+26,u,dead,14.79
+27,u,dead,0.57
+27,u,zinnia g.,0.56
+27,a,bouteloa ,9.23
+27,a,dead,47.6
+27,u,bouteloa ,1.21
+28,u,zinnia g. ,0.77
+28,u,chemaesyle l. ,1.28
+28,a,guieterrezia s. ,0.25
+28,a,chamaesyle l. ,1.96
+28,a,bouteloa ,0.25
+28,a,dead,0.97
+28,a,ambrosia p. ,0.05
+28,u,bouteloa ,0.34
+28,u,dead,4.86
+28,u,ambrosia p. ,0.64
+28,a,solanum,0.31
+29,u,dead,10.32
+29,a,dead,32.41
+29,u,bouteloa ,2.93
+29,a,bouteloa,9.81
+30,A,Bouteloa g.,5.47
+30,u,dead,1.26
+30,u,bouteloa ,0.65
+30,a,dead,25.73
+30,u,guiterrezia,0.08
+31,a,bouteloa ,2.57
+31,a,dead,4.62
+31,u,bouteloa ,3.15
+31,u,dead,3.96
+31,u,guiterrezia ,1.97
+32,a ,dead,14.1
+32,a,bouteloa ,5.53
+32,u,dead,5.62
+32,u,bouteloa ,5.76
+33,u,dead,1.38
+33,u,guiterrezia s. ,0.21
+33,a,bouteloa ,13.05
+33,u,bouteloa ,1.68
+33,a,dead,8.93
+34,A,Propus g.,0.82
+34,A,DEAD,36.51
+34,u,bouteloa ,4.2
+34,a,zinnia g. ,3.64
+34,u,dead,7.96
+34,a,bouteloa ,14.56
+34,a,guiterrezia s. ,0.42
+35,u,bouteloa,9.45
+35,u,dead,13.53
+35,a,dead,57.08
+35,a,bouteloa,13.57
+35,a,chamaesyce I. ,0.08
+36,u,dead ,19.01
+36,a,bouteloa,1.9
+36,u,bouteloa ,5.91
+36,a,dead,5.72
+36,u,guiterrezia s,0.14
+37,a,ratibida c. ,1.04
+37,a,helianthus a. ,0.25
+37,a,dead,1.55
+37,a,bouteloa,0.56
+37,a,guiterrezia s. ,0.03
+37,a,zinnia g. ,1.91
+37,u,guiterrezia s. ,0.17
+37,u,bouteloa ,0.43
+37,u,dead,1.13
+38,a,dead,12.38
+38,u,bouteloa,6.65
+38,u,dead,6.33
+38,a,bouteloa ,6.72
+39,u,bouteloa,3.94
+39,u,dead,6.3
+39,a,bouteloa ,34.09
+39,a,dead,37.73
+40,a,bouteloa ,16.01
+40,u,bouteloa ,0.13
+40,u,guiterrazia s.,1.77
+40,a,dead,26.8
+40,a,bouteloa,1.03

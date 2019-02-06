@@ -1,0 +1,33 @@
+leah = 8+9
+leah
+8+9
+leah = 'leah'
+leah
+leah = c('leah', 'nick')
+leah
+read.csv('raw/soil_moisture.csv')
+sm_raw = read.csv('raw/soil_moisture.csv')
+sm_raw = read.csv('raw/soil_moisture.csv')
+sm_raw
+sm_raw = read.csv('raw/soil_moisture.csv')
+head(sm_raw)
+nrow(sm_raw)
+sm_date = c(rep(as.Date('2018-07-27'), times = 80), #
+            rep(as.Date('2018-08-03'), times = 80), #
+            rep(as.Date('2018-08-09'), times = 80), #
+            rep(as.Date('2018-08-16'), times = 80), #
+            rep(as.Date('2018-08-24'), times = 80), #
+            rep(as.Date('2018-08-30'), times = 80), #
+            rep(as.Date('2018-09-07'), times = 80), #
+            rep(as.Date('2018-09-16'), times = 80))
+sm_date
+?rep
+rep(x = as.Date('2018-07-27'), times = 80)
+?mean
+mean(c(14, 25, 65, NA, 13), na.rm = TRUE)
+mean(c(14, 25, 65, NA, 13), na.rm = 17)
+mean(c(14, 25, 65, NA, 13), na.rm = 'nick')
+mean(c(14, 25, 65, NA, 13), na.rm = FALSE)
+nick(17)
+library(nick)
+install.packages('tidyverse')
