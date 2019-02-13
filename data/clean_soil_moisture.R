@@ -3,6 +3,7 @@
 
 ## load packages
 library(tidyverse)
+library(reshape2)
 
 ## read in data
 sm_raw = read.csv('raw/soil_moisture.csv')
@@ -38,8 +39,17 @@ sm_vwc = c(as.numeric(as.character(sm_raw[2:41, sm_vwc_rows[1]])),
            as.numeric(as.character(sm_raw[2:41, sm_vwc_rows[15]])),
            as.numeric(as.character(sm_raw[2:41, sm_vwc_rows[16]])))
 
-# combine it all together
-sm_clean = expand.grid(date = sm_date, plot = sm_plot)
+## combine it all together
+length(sm_date)
+length(sm_plot)
+length(sm_location)
+length(sm_vwc)
+
+sm_clean = data.frame(date = sm_date, plot = sm_plot)
 sm_clean$location = sm_location
 sm_clean$vwc = sm_vwc
 head(sm_clean)
+tail(sm_clean)
+
+## print
+# write.csv(sm_clean, 'sm_clean.csv')
