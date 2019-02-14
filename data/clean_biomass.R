@@ -13,7 +13,7 @@ nrow(bm_raw)
 ### will need to create new dataframe with date, plot, location, species, and weight
 
 ## date
-bm_date = rep(as.Date('2018-09-22'), times = 217)
+bm_date = rep(as.Date('2018-09-22'), times = 218)
   
 ## plot
 bm_plot = bm_raw$plot
@@ -30,8 +30,6 @@ bm_location[bm_location == 'U'] <- 'under'
 bm_species_fac = bm_raw$Species
 bm_species_fac_levels = levels(bm_species_fac)
 bm_species = as.character(bm_raw$Species)
-bm_species[bm_species == 'DEAD' | bm_species == 'dead' | bm_species == 'dead ' | 
-             bm_species == 'DEAD '] <- 'DEAD'
 bm_species[bm_species == bm_species_fac_levels[1] | 
              bm_species == bm_species_fac_levels[2]] <- 'AmPS'
 bm_species[bm_species == bm_species_fac_levels[3] | 
@@ -90,10 +88,11 @@ bm_weight = bm_raw$Weight.g.
 ## check sizes and combine
 length(bm_date)
 length(bm_plot)
+length(bm_location)
 length(bm_species)
 length(bm_weight)
 
-bm_clean = data.frame(date = bm_date, plot = bm_plot)
+bm_clean = data.frame(date = bm_date, plot = bm_plot, location = bm_location)
 bm_clean$code = bm_species
 bm_clean$weight = bm_weight
 head(bm_clean)
@@ -121,4 +120,6 @@ bm_clean$species = vapply(strsplit(bm_clean$binomial, " ", fixed = TRUE), "[", "
 head(bm_clean)
 tail(bm_clean)
 
+
+# bm_clean = arrange(bm_clean, date, plot, location, code)
 # write.csv(bm_clean, 'bm_clean.csv')

@@ -33,4 +33,6 @@ lai_clean = data.frame(date = lai_date, plot = lai_plot, lai = lai_raw$LAI)
 ## check and write out
 head(lai_clean)
 tail(lai_clean)
+
+# lai_clean = arrange(lai_clean, date, plot)
 # write.csv(lai_clean, 'lai_clean.csv')

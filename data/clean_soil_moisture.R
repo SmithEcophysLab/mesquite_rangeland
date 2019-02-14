@@ -51,5 +51,5 @@ sm_clean$vwc = sm_vwc
 head(sm_clean)
 tail(sm_clean)
 
-## print
+## sm_clean = arrange(sm_clean, date, plot, location)
 # write.csv(sm_clean, 'sm_clean.csv')
