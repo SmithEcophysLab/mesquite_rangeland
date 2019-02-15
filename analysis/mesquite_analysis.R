@@ -172,6 +172,56 @@ t.test(subset(bm_lifeform_tree, location == 'under')$weight_sum,
        subset(bm_lifeform_tree, location == 'away')$weight_sum,
        paired = T) # nothing with trees (only one tree plot)
 
+#### grass/forb ratio
+grass_ratio = bm_lifeform_grass$weight_sum / 
+  rowSums(cbind(bm_lifeform_forb$weight_sum, bm_lifeform_grass$weight_sum, 
+      bm_lifeform_tree$weight_sum))
+
+grass_ratio_df = data.frame(bm_lifeform_grass[, c(1,2)], grass_ratio = grass_ratio)
+
+t.test(subset(grass_ratio_df, location == 'under')$grass_ratio,
+       subset(grass_ratio_df, location == 'away')$grass_ratio,
+       paired = T)
+
+#### plot out grass ratio results
+grass_ratio_vioplot = plot(NULL, ylim = c(0, 1.2), xlim = c(0, 3), yaxt = 'n', 
+                           xaxt = 'n', ylab = '', xlab = '')
+grass_ratio_vioplot = vioplot(subset(grass_ratio_df, location == 'under')$grass_ratio,
+                              subset(grass_ratio_df, location == 'away')$grass_ratio,
+                              add = T, col = c('grey', 'yellow'))
+axis(2, seq(0, 1, 0.2), las = 1)
+axis(1, c('under', 'away'), at = c(1, 2))
+mtext(side = 2, 'Grass ratio', line = 3)
+text(1, 1.1, paste(round(mean(subset(grass_ratio_df, location == 'under')$grass_ratio, 
+                              na.rm =T), 2),
+                   '±',
+                   round(sd(subset(grass_ratio_df, location == 'under')$grass_ratio, 
+                            na.rm =T) / sqrt(40), 2),
+                   sep = ' '))
+text(2, 1.1, paste(round(mean(subset(grass_ratio_df, location == 'away')$grass_ratio, 
+                              na.rm =T), 2),
+                   '±',
+                   round(sd(subset(grass_ratio_df, location == 'away')$grass_ratio, 
+                            na.rm =T) / sqrt(40), 2),
+                   '*',
+                   sep = ' '))
+#legend('topright', c('Under', 'Away'), pch = 16, col = c('grey', 'yellow'))
+
+#### plot out the lifeform results
+bm_lifeform_vioplot = plot(NULL, ylim = c(0, 40), xlim = c(0, 5), yaxt = 'n', 
+                           xaxt = 'n', ylab = '', xlab = '')
+bm_lifeform_vioplot = vioplot(subset(bm_lifeform_grass, location == 'under')$weight_sum,
+                              subset(bm_lifeform_grass, location == 'away')$weight_sum,
+                              subset(bm_lifeform_forb, location == 'under')$weight_sum,
+                              subset(bm_lifeform_forb, location == 'away')$weight_sum,
+                              add = T,
+                              col = rep(c('grey', 'yellow'), times = 2),
+                              ylab = '', xlab = '')
+axis(2, seq(0, 40, 10), las = 1)
+axis(1, c('grass', 'forb'), at = c(1.5, 3.5))
+mtext(side = 2, 'Biomass (g)', line = 3)
+legend('topright', c('Under', 'Away'), pch = 16, col = c('grey', 'yellow'))
+
 ##########################################################################################
 ### A3b: less grass and more forbs under the mesquite
 ##########################################################################################
