@@ -13,12 +13,19 @@ library(emmeans)
 sm = read.csv("../data/sm_clean.csv") # soil moisture
 bm = read.csv("../data/bm_clean.csv") # biomass
 lai = read.csv("../data/lai_clean.csv") # lai
+sc = read.csv("../data/sc_clean.csv") # cover (species composition)
 
 ##########################################################################################
 ### Q1: What does the size distribution (in LAI) of the trees look like?
 ##########################################################################################
-#### create a histogram
-hist(lai$lai,breaks = 20) 
+#### mean plot lai
+lai_group_by_plot = group_by(lai, plot)
+lai_mean = summarise(lai_group_by_plot, lai_mean = mean(lai))
+
+#### create a histogram and get summary statistics
+hist(lai_mean$lai_mean, breaks = 5)
+mean(lai_mean$lai_mean)
+sd(lai_mean$lai_mean) / sqrt(40)
 
 ##########################################################################################
 ### A1: LAI is fairly normal (center just below 1), but quite a big spread
@@ -92,7 +99,7 @@ mtext(side = 2, 'VWC (%)', line = 3)
 legend('topright', c('Under', 'Away'), pch = 16, col = c('grey', 'yellow'))
 
 ##########################################################################################
-### A2: It's wetter outside of the mesquite area
+### A2: It's wetter outside of the mesquite area, but biggest difference in wet times
 ##########################################################################################
 
 ##########################################################################################
@@ -327,10 +334,113 @@ bm_total_effect_df_mean_lai_lm = lm(bm_total_effect_df_lai_sub$bm_total_effect ~
 anova(bm_total_effect_df_mean_lai_lm) # nada
 
 ##########################################################################################
-### Q5b: tree size doesn't seem to matter for biomass effect
+### A5b: tree size doesn't seem to matter for biomass effect
 ##########################################################################################
 
 
+##########################################################################################
+### Q6a: does mesquite influence species richness?
+##########################################################################################
+#### remove litter and bareground from cover data
+sc_live = subset(sc, code != 'BARE' & code != 'LITT')
+
+#### calculate richness
+sc_richness_pre = data.frame(plot = rep(seq(1, 40), 2), 
+                             location = c(rep('under', 40), rep('away', 40)),
+                             date = rep('2018-09-22', times = 80))
+nrow(sc_richness_pre)
+
+#### calculate species richness per plot type (for non-litter)
+sc_richness_group_by = group_by(sc_live, date, plot, location)
+sc_richness_sums = summarise(sc_richness_group_by, richness = n())
+
+##### combine richness into data fram with zeros
+sc_richness = left_join(sc_richness_pre, sc_richness_sums)
+head(sc_richness)
+sc_richness$richness[is.na(sc_richness$richness)] = 0
+head(sc_richness)
+tail(sc_richness)
+
+##### run the analysis
+t.test(subset(sc_richness, location == 'under')$richness, 
+       subset(sc_richness, location == 'away')$richness,
+       paired = T)
+
+##########################################################################################
+### A6a: richness is the same under the mesquite
+##########################################################################################
+
+##########################################################################################
+### Q6b: does mesquite influence species diversity?
+##########################################################################################
+#### diversity is Shannon's diversity (D) where
+#### H = -sum(percent cover * log(percent cover))
+#### probably need to recalculate the cover as cover relative to living cover of the plot
+
+#### get total living biomass of the each plot
+sc_live_group_by_plot = group_by(sc_live, date, plot, location)
+sc_live_sums = summarise(sc_live_group_by_plot, cover_sum = sum(cover))
+
+#### join cover sums to sc_live
+sc_live_revised = left_join(sc_live, sc_live_sums)
+
+#### get relative cover
+sc_live_revised$cover_revised = sc_live_revised$cover / sc_live_revised$cover_sum
+
+#### do diversity calcs
+sc_live_revised$logcover = log(sc_live_revised$cover_revised) # percent cover squared
+
+#### calculate diversity
+sc_diversity_pre = data.frame(plot = rep(seq(1, 40), 2), 
+                             location = c(rep('under', 40), rep('away', 40)),
+                             date = rep('2018-09-22', times = 80))
+nrow(sc_diversity_pre)
+
+#### get sum of cover2 by plot
+sc_diversity_group_by = group_by(sc_live_revised, date, plot, location)
+sc_diversity_sums = summarise(sc_diversity_group_by, logcover_sum = sum(logcover))
+
+#### calculate diversity
+sc_diversity_sums$H = -sc_diversity_sums$logcover_sum
+
+##### combine diversity into data fram with zeros
+sc_diversity = left_join(sc_diversity_pre, sc_diversity_sums)
+head(sc_diversity)
+sc_diversity$H[is.na(sc_diversity$H)] = 0
+head(sc_diversity)
+tail(sc_diversity)
+
+##### run the analysis
+t.test(subset(sc_diversity, location == 'under')$H, 
+       subset(sc_diversity, location == 'away')$H,
+       paired = T)
+hist(sc_diversity$H) # no difference
+plot(H ~ location, sc_diversity)
+
+##########################################################################################
+### A6b: diversity is the same under the mesquite
+##########################################################################################
 
 
+##########################################################################################
+### Q6c: is evenness the same under the mesquite?
+##########################################################################################
+#### here we're defining evenness as diversity divided by richness
 
+#### put diversity and richness data together
+sc_evenness = left_join(sc_richness, sc_diversity)
+head(sc_evenness)
+
+#### calculate evenness
+sc_evenness$evenness = sc_evenness$H / sc_evenness$richness
+
+#### run analysis
+t.test(subset(sc_evenness, location == 'under')$evenness, 
+       subset(sc_evenness, location == 'away')$evenness,
+       paired = T)
+hist(sc_evenness$evenness) # no difference
+plot(evenness ~ location, sc_evenness)
+
+##########################################################################################
+### A6c: evenness is the same under the mesquite
+##########################################################################################
