@@ -1,0 +1,314 @@
+"","date","plot","location","code","cover","binomial","lifeform","family","genus","species"
+"1",2018-09-22,1,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"2",2018-09-22,1,"away","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"3",2018-09-22,1,"away","LITT",90,"litter","LITT","litter","litter",NA
+"4",2018-09-22,1,"away","SoEl",2,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"5",2018-09-22,1,"under","BARE",5,"bareground","BARE","bareground","bareground",NA
+"6",2018-09-22,1,"under","GuSa",5,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"7",2018-09-22,1,"under","LITT",90,"litter","LITT","litter","litter",NA
+"8",2018-09-22,1,"under","RaCo",2,"Ratibida columnifera","Forb","Asteraceae","Ratibida","columnifera"
+"9",2018-09-22,2,"away","BARE",80,"bareground","BARE","bareground","bareground",NA
+"10",2018-09-22,2,"away","BoGr",5,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"11",2018-09-22,2,"away","GuSa",2,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"12",2018-09-22,2,"away","LITT",20,"litter","LITT","litter","litter",NA
+"13",2018-09-22,2,"under","BARE",40,"bareground","BARE","bareground","bareground",NA
+"14",2018-09-22,2,"under","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"15",2018-09-22,2,"under","LITT",60,"litter","LITT","litter","litter",NA
+"16",2018-09-22,3,"away","BARE",40,"bareground","BARE","bareground","bareground",NA
+"17",2018-09-22,3,"away","BoGr",12,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"18",2018-09-22,3,"away","GuSa",2,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"19",2018-09-22,3,"away","LITT",50,"litter","LITT","litter","litter",NA
+"20",2018-09-22,3,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"21",2018-09-22,3,"under","BoGr",5,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"22",2018-09-22,3,"under","GuSa",10,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"23",2018-09-22,3,"under","LITT",80,"litter","LITT","litter","litter",NA
+"24",2018-09-22,4,"away","BARE",2,"bareground","BARE","bareground","bareground",NA
+"25",2018-09-22,4,"away","LITT",95,"litter","LITT","litter","litter",NA
+"26",2018-09-22,4,"away","RaCo",2,"Ratibida columnifera","Forb","Asteraceae","Ratibida","columnifera"
+"27",2018-09-22,4,"under","AmPs",3,"Ambrosia psilostachya","Forb","Asteraceae","Ambrosia","psilostachya"
+"28",2018-09-22,4,"under","BARE",30,"bareground","BARE","bareground","bareground",NA
+"29",2018-09-22,4,"under","GuSa",5,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"30",2018-09-22,4,"under","LITT",80,"litter","LITT","litter","litter",NA
+"31",2018-09-22,4,"under","RaCo",4,"Ratibida columnifera","Forb","Asteraceae","Ratibida","columnifera"
+"32",2018-09-22,5,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"33",2018-09-22,5,"away","BoGr",20,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"34",2018-09-22,5,"away","GuSa",50,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"35",2018-09-22,5,"away","LITT",20,"litter","LITT","litter","litter",NA
+"36",2018-09-22,5,"under","BARE",5,"bareground","BARE","bareground","bareground",NA
+"37",2018-09-22,5,"under","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"38",2018-09-22,5,"under","LITT",60,"litter","LITT","litter","litter",NA
+"39",2018-09-22,5,"under","RaCo",5,"Ratibida columnifera","Forb","Asteraceae","Ratibida","columnifera"
+"40",2018-09-22,5,"under","SaTr",2,"Salsola tragus","Forb","Chenopodiaceae","Salsola","tragus"
+"41",2018-09-22,6,"away","BARE",50,"bareground","BARE","bareground","bareground",NA
+"42",2018-09-22,6,"away","BoGr",50,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"43",2018-09-22,6,"away","LITT",20,"litter","LITT","litter","litter",NA
+"44",2018-09-22,6,"under","BARE",40,"bareground","BARE","bareground","bareground",NA
+"45",2018-09-22,6,"under","GuSa",50,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"46",2018-09-22,6,"under","LITT",10,"litter","LITT","litter","litter",NA
+"47",2018-09-22,7,"away","BARE",10,"bareground","BARE","bareground","bareground",NA
+"48",2018-09-22,7,"away","BoGr",75,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"49",2018-09-22,7,"away","LITT",20,"litter","LITT","litter","litter",NA
+"50",2018-09-22,7,"under","BARE",5,"bareground","BARE","bareground","bareground",NA
+"51",2018-09-22,7,"under","BoGr",4,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"52",2018-09-22,7,"under","GuSa",2,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"53",2018-09-22,7,"under","LITT",5,"litter","LITT","litter","litter",NA
+"54",2018-09-22,7,"under","SaTr",95,"Salsola tragus","Forb","Chenopodiaceae","Salsola","tragus"
+"55",2018-09-22,8,"away","BARE",10,"bareground","BARE","bareground","bareground",NA
+"56",2018-09-22,8,"away","BoGr",1,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"57",2018-09-22,8,"away","LaCo",5,"Laennecia coulteri","Forb","Asteraceae","Laennecia","coulteri"
+"58",2018-09-22,8,"away","LITT",90,"litter","LITT","litter","litter",NA
+"59",2018-09-22,8,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"60",2018-09-22,8,"under","BoGr",50,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"61",2018-09-22,8,"under","LITT",20,"litter","LITT","litter","litter",NA
+"62",2018-09-22,8,"under","SoEl",20,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"63",2018-09-22,9,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"64",2018-09-22,9,"away","BoGr",5,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"65",2018-09-22,9,"away","ChLa",5,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"66",2018-09-22,9,"away","LITT",70,"litter","LITT","litter","litter",NA
+"67",2018-09-22,9,"away","PoMu",1,"Portulaca mundula","Forb","Portulacaceaea","Portulaca","mundula"
+"68",2018-09-22,9,"away","SaRe",2,"Salvia reflexa","Forb","Lamiaceae","Salvia","reflexa"
+"69",2018-09-22,9,"under","BARE",95,"bareground","BARE","bareground","bareground",NA
+"70",2018-09-22,9,"under","LITT",5,"litter","LITT","litter","litter",NA
+"71",2018-09-22,10,"away","BARE",3,"bareground","BARE","bareground","bareground",NA
+"72",2018-09-22,10,"away","BoGr",5,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"73",2018-09-22,10,"away","BoGr",94,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"74",2018-09-22,10,"away","ChLa",5,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"75",2018-09-22,10,"away","CuFo",5,"cucurbita foetidissima","Forb","Cucurbitaceae","cucurbita","foetidissima"
+"76",2018-09-22,10,"away","LITT",90,"litter","LITT","litter","litter",NA
+"77",2018-09-22,10,"away","LITT",10,"litter","LITT","litter","litter",NA
+"78",2018-09-22,10,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"79",2018-09-22,10,"under","BARE",40,"bareground","BARE","bareground","bareground",NA
+"80",2018-09-22,10,"under","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"81",2018-09-22,10,"under","BoGr",20,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"82",2018-09-22,10,"under","ChLa",2,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"83",2018-09-22,10,"under","GuSa",10,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"84",2018-09-22,10,"under","LITT",75,"litter","LITT","litter","litter",NA
+"85",2018-09-22,10,"under","LITT",50,"litter","LITT","litter","litter",NA
+"86",2018-09-22,11,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"87",2018-09-22,11,"away","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"88",2018-09-22,11,"away","ChLa",30,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"89",2018-09-22,11,"away","GuSa",10,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"90",2018-09-22,11,"away","LITT",50,"litter","LITT","litter","litter",NA
+"91",2018-09-22,11,"away","RaCo",10,"Ratibida columnifera","Forb","Asteraceae","Ratibida","columnifera"
+"92",2018-09-22,11,"under","BARE",50,"bareground","BARE","bareground","bareground",NA
+"93",2018-09-22,11,"under","BoGr",3,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"94",2018-09-22,11,"under","ChLa",1,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"95",2018-09-22,11,"under","LITT",50,"litter","LITT","litter","litter",NA
+"96",2018-09-22,11,"under","PoMu",1,"Portulaca mundula","Forb","Portulacaceaea","Portulaca","mundula"
+"97",2018-09-22,11,"under","SoEl",1,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"98",2018-09-22,12,"away","BARE",20,"bareground","BARE","bareground","bareground",NA
+"99",2018-09-22,12,"away","BoGr",50,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"100",2018-09-22,12,"away","LITT",20,"litter","LITT","litter","litter",NA
+"101",2018-09-22,12,"under","BARE",2,"bareground","BARE","bareground","bareground",NA
+"102",2018-09-22,12,"under","BoGr",80,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"103",2018-09-22,12,"under","LITT",20,"litter","LITT","litter","litter",NA
+"104",2018-09-22,13,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"105",2018-09-22,13,"away","BoGr",40,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"106",2018-09-22,13,"away","LITT",60,"litter","LITT","litter","litter",NA
+"107",2018-09-22,13,"under","BARE",85,"bareground","BARE","bareground","bareground",NA
+"108",2018-09-22,13,"under","BoGr",2,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"109",2018-09-22,13,"under","LITT",20,"litter","LITT","litter","litter",NA
+"110",2018-09-22,14,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"111",2018-09-22,14,"away","BoGr",2,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"112",2018-09-22,14,"away","ChLa",2,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"113",2018-09-22,14,"away","LITT",95,"litter","LITT","litter","litter",NA
+"114",2018-09-22,14,"under","BARE",20,"bareground","BARE","bareground","bareground",NA
+"115",2018-09-22,14,"under","BoGr",5,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"116",2018-09-22,14,"under","GuSa",5,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"117",2018-09-22,14,"under","LITT",60,"litter","LITT","litter","litter",NA
+"118",2018-09-22,14,"under","ZiGr",2,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"119",2018-09-22,15,"away","BARE",10,"bareground","BARE","bareground","bareground",NA
+"120",2018-09-22,15,"away","BoGr",90,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"121",2018-09-22,15,"away","ChLa",2,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"122",2018-09-22,15,"away","LITT",30,"litter","LITT","litter","litter",NA
+"123",2018-09-22,15,"under","BARE",40,"bareground","BARE","bareground","bareground",NA
+"124",2018-09-22,15,"under","BoGr",62,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"125",2018-09-22,15,"under","ChLa",50,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"126",2018-09-22,15,"under","LITT",10,"litter","LITT","litter","litter",NA
+"127",2018-09-22,16,"away","BARE",10,"bareground","BARE","bareground","bareground",NA
+"128",2018-09-22,16,"away","BoGr",20,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"129",2018-09-22,16,"away","LITT",70,"litter","LITT","litter","litter",NA
+"130",2018-09-22,16,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"131",2018-09-22,16,"under","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"132",2018-09-22,16,"under","LITT",90,"litter","LITT","litter","litter",NA
+"133",2018-09-22,16,"under","ZiGr",2,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"134",2018-09-22,17,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"135",2018-09-22,17,"away","BoGr",20,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"136",2018-09-22,17,"away","LITT",75,"litter","LITT","litter","litter",NA
+"137",2018-09-22,17,"under","BARE",5,"bareground","BARE","bareground","bareground",NA
+"138",2018-09-22,17,"under","BoGr",25,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"139",2018-09-22,17,"under","LITT",75,"litter","LITT","litter","litter",NA
+"140",2018-09-22,18,"away","BARE",10,"bareground","BARE","bareground","bareground",NA
+"141",2018-09-22,18,"away","BoGr",40,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"142",2018-09-22,18,"away","LITT",50,"litter","LITT","litter","litter",NA
+"143",2018-09-22,18,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"144",2018-09-22,18,"under","BoGr",20,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"145",2018-09-22,18,"under","LITT",70,"litter","LITT","litter","litter",NA
+"146",2018-09-22,18,"under","ZiGr",5,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"147",2018-09-22,19,"away","BARE",20,"bareground","BARE","bareground","bareground",NA
+"148",2018-09-22,19,"away","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"149",2018-09-22,19,"away","ChLa",4,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"150",2018-09-22,19,"away","LITT",70,"litter","LITT","litter","litter",NA
+"151",2018-09-22,19,"under","BARE",30,"bareground","BARE","bareground","bareground",NA
+"152",2018-09-22,19,"under","ChLa",60,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"153",2018-09-22,19,"under","LITT",20,"litter","LITT","litter","litter",NA
+"154",2018-09-22,19,"under","SoEl",2,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"155",2018-09-22,20,"away","BARE",50,"bareground","BARE","bareground","bareground",NA
+"156",2018-09-22,20,"away","ChLa",2,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"157",2018-09-22,20,"away","LITT",50,"litter","LITT","litter","litter",NA
+"158",2018-09-22,20,"away","PoMu",1,"Portulaca mundula","Forb","Portulacaceaea","Portulaca","mundula"
+"159",2018-09-22,20,"away","SoEl",1,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"160",2018-09-22,20,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"161",2018-09-22,20,"under","ChLa",20,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"162",2018-09-22,20,"under","CyDa",1,"Cynodon dactylon","Grass","Poaceae","Cynodon","dactylon"
+"163",2018-09-22,20,"under","LaCo",10,"Laennecia coulteri","Forb","Asteraceae","Laennecia","coulteri"
+"164",2018-09-22,20,"under","LITT",50,"litter","LITT","litter","litter",NA
+"165",2018-09-22,20,"under","SoEl",10,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"166",2018-09-22,21,"away","BARE",20,"bareground","BARE","bareground","bareground",NA
+"167",2018-09-22,21,"away","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"168",2018-09-22,21,"away","LITT",80,"litter","LITT","litter","litter",NA
+"169",2018-09-22,21,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"170",2018-09-22,21,"under","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"171",2018-09-22,21,"under","LITT",80,"litter","LITT","litter","litter",NA
+"172",2018-09-22,22,"away","BARE",10,"bareground","BARE","bareground","bareground",NA
+"173",2018-09-22,22,"away","BoGr",5,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"174",2018-09-22,22,"away","ChLa",1,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"175",2018-09-22,22,"away","LITT",90,"litter","LITT","litter","litter",NA
+"176",2018-09-22,22,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"177",2018-09-22,22,"under","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"178",2018-09-22,22,"under","LITT",80,"litter","LITT","litter","litter",NA
+"179",2018-09-22,23,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"180",2018-09-22,23,"away","BoGr",30,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"181",2018-09-22,23,"away","LITT",70,"litter","LITT","litter","litter",NA
+"182",2018-09-22,23,"away","SoEl",5,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"183",2018-09-22,23,"under","BARE",30,"bareground","BARE","bareground","bareground",NA
+"184",2018-09-22,23,"under","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"185",2018-09-22,23,"under","ChLa",2,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"186",2018-09-22,23,"under","LITT",60,"litter","LITT","litter","litter",NA
+"187",2018-09-22,24,"away","BoGr",50,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"188",2018-09-22,24,"away","LaCo",1,"Laennecia coulteri","Forb","Asteraceae","Laennecia","coulteri"
+"189",2018-09-22,24,"away","LITT",50,"litter","LITT","litter","litter",NA
+"190",2018-09-22,24,"away","ZiGr",3,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"191",2018-09-22,24,"under","BARE",70,"bareground","BARE","bareground","bareground",NA
+"192",2018-09-22,24,"under","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"193",2018-09-22,24,"under","GuSa",2,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"194",2018-09-22,24,"under","LITT",20,"litter","LITT","litter","litter",NA
+"195",2018-09-22,24,"under","SoEl",5,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"196",2018-09-22,25,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"197",2018-09-22,25,"away","BoGr",60,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"198",2018-09-22,25,"away","LITT",40,"litter","LITT","litter","litter",NA
+"199",2018-09-22,25,"under","BARE",70,"bareground","BARE","bareground","bareground",NA
+"200",2018-09-22,25,"under","BoGr",7,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"201",2018-09-22,25,"under","LITT",10,"litter","LITT","litter","litter",NA
+"202",2018-09-22,25,"under","SoEl",10,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"203",2018-09-22,25,"under","ZiGr",10,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"204",2018-09-22,26,"away","BARE",20,"bareground","BARE","bareground","bareground",NA
+"205",2018-09-22,26,"away","BoGr",30,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"206",2018-09-22,26,"away","LITT",50,"litter","LITT","litter","litter",NA
+"207",2018-09-22,26,"away","PoMu",1,"Portulaca mundula","Forb","Portulacaceaea","Portulaca","mundula"
+"208",2018-09-22,26,"away","SoEl",5,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"209",2018-09-22,26,"under","BARE",60,"bareground","BARE","bareground","bareground",NA
+"210",2018-09-22,26,"under","BoGr",40,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"211",2018-09-22,26,"under","LITT",30,"litter","LITT","litter","litter",NA
+"212",2018-09-22,27,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"213",2018-09-22,27,"away","BoGr",20,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"214",2018-09-22,27,"away","LITT",80,"litter","LITT","litter","litter",NA
+"215",2018-09-22,27,"under","BARE",90,"bareground","BARE","bareground","bareground",NA
+"216",2018-09-22,27,"under","BoGr",5,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"217",2018-09-22,27,"under","LITT",10,"litter","LITT","litter","litter",NA
+"218",2018-09-22,27,"under","ZiGr",2,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"219",2018-09-22,28,"away","AmPs",2,"Ambrosia psilostachya","Forb","Asteraceae","Ambrosia","psilostachya"
+"220",2018-09-22,28,"away","BARE",20,"bareground","BARE","bareground","bareground",NA
+"221",2018-09-22,28,"away","BoGr",2,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"222",2018-09-22,28,"away","ChLa",20,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"223",2018-09-22,28,"away","GuSa",6,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"224",2018-09-22,28,"away","LITT",50,"litter","LITT","litter","litter",NA
+"225",2018-09-22,28,"away","SoEl",2,"Solanum elaegnaifolium","Forb","Solanaceae","Solanum","elaegnaifolium"
+"226",2018-09-22,28,"under","AmPs",7,"Ambrosia psilostachya","Forb","Asteraceae","Ambrosia","psilostachya"
+"227",2018-09-22,28,"under","BARE",36,"bareground","BARE","bareground","bareground",NA
+"228",2018-09-22,28,"under","BoGr",3,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"229",2018-09-22,28,"under","ChLa",20,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"230",2018-09-22,28,"under","LITT",40,"litter","LITT","litter","litter",NA
+"231",2018-09-22,28,"under","ZiGr",3,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"232",2018-09-22,29,"away","BARE",11,"bareground","BARE","bareground","bareground",NA
+"233",2018-09-22,29,"away","BoGr",30,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"234",2018-09-22,29,"away","LITT",60,"litter","LITT","litter","litter",NA
+"235",2018-09-22,29,"under","BARE",5,"bareground","BARE","bareground","bareground",NA
+"236",2018-09-22,29,"under","BoGr",30,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"237",2018-09-22,29,"under","LITT",80,"litter","LITT","litter","litter",NA
+"238",2018-09-22,30,"away","BARE",2,"bareground","BARE","bareground","bareground",NA
+"239",2018-09-22,30,"away","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"240",2018-09-22,30,"away","ChLa",1,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"241",2018-09-22,30,"away","LITT",95,"litter","LITT","litter","litter",NA
+"242",2018-09-22,30,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"243",2018-09-22,30,"under","BoGr",22,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"244",2018-09-22,30,"under","GuSa",1,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"245",2018-09-22,30,"under","LITT",79,"litter","LITT","litter","litter",NA
+"246",2018-09-22,31,"away","BARE",71,"bareground","BARE","bareground","bareground",NA
+"247",2018-09-22,31,"away","BoGr",20,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"248",2018-09-22,31,"away","LITT",1,"litter","LITT","litter","litter",NA
+"249",2018-09-22,31,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"250",2018-09-22,31,"under","BoGr",26,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"251",2018-09-22,31,"under","CuFo",2,"cucurbita foetidissima","Forb","Cucurbitaceae","cucurbita","foetidissima"
+"252",2018-09-22,31,"under","GuSa",20,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"253",2018-09-22,31,"under","LITT",33,"litter","LITT","litter","litter",NA
+"254",2018-09-22,32,"away","BoGr",30,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"255",2018-09-22,32,"away","LITT",74,"litter","LITT","litter","litter",NA
+"256",2018-09-22,32,"under","BoGr",50,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"257",2018-09-22,32,"under","LITT",50,"litter","LITT","litter","litter",NA
+"258",2018-09-22,33,"away","BARE",10,"bareground","BARE","bareground","bareground",NA
+"259",2018-09-22,33,"away","BoGr",50,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"260",2018-09-22,33,"away","LITT",40,"litter","LITT","litter","litter",NA
+"261",2018-09-22,33,"away","PoMu",1,"Portulaca mundula","Forb","Portulacaceaea","Portulaca","mundula"
+"262",2018-09-22,33,"under","BARE",10,"bareground","BARE","bareground","bareground",NA
+"263",2018-09-22,33,"under","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"264",2018-09-22,33,"under","GuSa",3,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"265",2018-09-22,33,"under","LITT",80,"litter","LITT","litter","litter",NA
+"266",2018-09-22,33,"under","ZiGr",5,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"267",2018-09-22,34,"away","BARE",2,"bareground","BARE","bareground","bareground",NA
+"268",2018-09-22,34,"away","BoGr",80,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"269",2018-09-22,34,"away","GuSa",2,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"270",2018-09-22,34,"away","LITT",30,"litter","LITT","litter","litter",NA
+"271",2018-09-22,34,"away","PrGl",2,"Prosopis glandulosa","Shrub/tree","Fabaceae","Prosopis","glandulosa"
+"272",2018-09-22,34,"under","BARE",5,"bareground","BARE","bareground","bareground",NA
+"273",2018-09-22,34,"under","BoGr",25,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"274",2018-09-22,34,"under","GuSa",2,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"275",2018-09-22,34,"under","LITT",80,"litter","LITT","litter","litter",NA
+"276",2018-09-22,34,"under","ZiGr",5,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"277",2018-09-22,35,"away","ArHu",2,"Argythamnia humilis","Forb","Euphorbiaceae","Argythamnia","humilis"
+"278",2018-09-22,35,"away","BARE",5,"bareground","BARE","bareground","bareground",NA
+"279",2018-09-22,35,"away","BoGr",20,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"280",2018-09-22,35,"away","ChLa",1,"Chamaesyce lata","Forb","Euphorbiaceae","Chamaesyce","lata"
+"281",2018-09-22,35,"away","LITT",75,"litter","LITT","litter","litter",NA
+"282",2018-09-22,35,"under","BARE",20,"bareground","BARE","bareground","bareground",NA
+"283",2018-09-22,35,"under","BoGr",40,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"284",2018-09-22,35,"under","LITT",42,"litter","LITT","litter","litter",NA
+"285",2018-09-22,36,"away","BARE",80,"bareground","BARE","bareground","bareground",NA
+"286",2018-09-22,36,"away","BoGr",4,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"287",2018-09-22,36,"away","LITT",18,"litter","LITT","litter","litter",NA
+"288",2018-09-22,36,"under","BARE",2,"bareground","BARE","bareground","bareground",NA
+"289",2018-09-22,36,"under","BoGr",30,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"290",2018-09-22,36,"under","GuSa",1,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"291",2018-09-22,36,"under","LITT",70,"litter","LITT","litter","litter",NA
+"292",2018-09-22,37,"away","BARE",90,"bareground","BARE","bareground","bareground",NA
+"293",2018-09-22,37,"away","GuSa",1,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"294",2018-09-22,37,"away","HeAn",1,"Helianthus annuus","Forb","Asteraceae","Helianthus","annuus"
+"295",2018-09-22,37,"away","LITT",5,"litter","LITT","litter","litter",NA
+"296",2018-09-22,37,"away","RaCo",2,"Ratibida columnifera","Forb","Asteraceae","Ratibida","columnifera"
+"297",2018-09-22,37,"away","ZiGr",5,"Zinnia grandiflora","Forb","Asteraceae","Zinnia","grandiflora"
+"298",2018-09-22,37,"under","BARE",30,"bareground","BARE","bareground","bareground",NA
+"299",2018-09-22,37,"under","BoGr",5,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"300",2018-09-22,37,"under","GuSa",2,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"301",2018-09-22,37,"under","LITT",70,"litter","LITT","litter","litter",NA
+"302",2018-09-22,38,"away","BARE",60,"bareground","BARE","bareground","bareground",NA
+"303",2018-09-22,38,"away","BoGr",10,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"304",2018-09-22,38,"away","LITT",40,"litter","LITT","litter","litter",NA
+"305",2018-09-22,38,"under","BARE",5,"bareground","BARE","bareground","bareground",NA
+"306",2018-09-22,38,"under","BoGr",31,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"307",2018-09-22,38,"under","LITT",75,"litter","LITT","litter","litter",NA
+"308",2018-09-22,39,"away","BARE",4,"bareground","BARE","bareground","bareground",NA
+"309",2018-09-22,39,"away","BoGr",40,"Bouteloua gracilis","Grass","Poaceae","Bouteloua","gracilis"
+"310",2018-09-22,39,"away","LITT",62,"litter","LITT","litter","litter",NA
+"311",2018-09-22,39,"under","BARE",90,"bareground","BARE","bareground","bareground",NA
+"312",2018-09-22,39,"under","GuSa",5,"Gutierrezia sarothrae","Forb","Asteraceae","Gutierrezia","sarothrae"
+"313",2018-09-22,39,"under","LITT",10,"litter","LITT","litter","litter",NA
