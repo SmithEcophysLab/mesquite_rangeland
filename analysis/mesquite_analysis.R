@@ -1,6 +1,7 @@
 # Scipt for analyzing the mequite data
 ## The script proceeds as stated questions followed by the code to analyze the data
 ## in response to that stated question
+setwd("C:/Users/leah.ortiz/Documents/Git/mesquite_rangeland/analysis")
 
 ## install packages
 install.packages('lme4')
