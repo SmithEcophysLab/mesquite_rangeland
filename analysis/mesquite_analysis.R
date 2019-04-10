@@ -2,6 +2,9 @@
 ## The script proceeds as stated questions followed by the code to analyze the data
 ## in response to that stated question
 
+## install packages
+install.packages('lme4')
+
 ## load libraries
 library(tidyverse)
 library(vioplot)
