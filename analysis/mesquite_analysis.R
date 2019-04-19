@@ -149,6 +149,7 @@ t.test(subset(bm_total, location == 'under')$weight_sum,
        paired = T)
 
 #### TTABS ####
+par(oma = c(0, 2, 1, 1))
 bm_boxplot = plot(weight_sum * 4 ~ location, data = bm_total,
                   col = c('orange', 'blue'),
                   outcol = c('orange', 'blue'),
@@ -158,7 +159,7 @@ bm_boxplot = plot(weight_sum * 4 ~ location, data = bm_total,
                   ylim = c(0, 150))
 axis(1, at = c(1, 2), c('Outside', 'Under'), cex.axis = 2)
 axis(2, seq(0, 150, 50), cex.axis = 1.5, las = 1)
-mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 1.6, line = 4)
+mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 2, line = 4)
 text(2.2, 145, 'p = 0.054', cex = 1.8)
 
 # bm_dot = ggplot(bm_total, aes(x=location, y=weight_sum, fill = location)) +
@@ -295,7 +296,7 @@ grass_ratio_boxplot = boxplot(grass_ratio * 100 ~ location, data = grass_ratio_d
                   ylim = c(0, 115))
 axis(1, at = c(1, 2), c('Outside', 'Under'), cex.axis = 2)
 axis(2, seq(0, 100, 25), cex.axis = 1.5, las = 1)
-mtext(side = 2, 'Grass Biomass (%)', cex = 1.6, line = 4)
+mtext(side = 2, 'Grass Biomass (%)', cex = 2.4, line = 4)
 text(2.2, 109, 'p < 0.05', cex = 1.8)
 #### TTABS ####
 
@@ -309,7 +310,7 @@ forb_ratio_boxplot = boxplot(forb_ratio * 100 ~ location, data = forb_ratio_df,
                               ylim = c(0, 115))
 axis(1, at = c(1, 2), c('Outside', 'Under'), cex.axis = 2)
 axis(2, seq(0, 100, 25), cex.axis = 1.5, las = 1)
-mtext(side = 2, 'Forb Biomass (%)', cex = 1.6, line = 4)
+mtext(side = 2, 'Forb Biomass (%)', cex = 2.4, line = 4)
 text(2.2, 109, 'p < 0.05', cex = 1.8)
 #### TTABS ####
 
