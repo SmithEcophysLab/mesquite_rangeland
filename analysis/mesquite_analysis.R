@@ -159,7 +159,7 @@ bm_boxplot = plot(weight_sum * 4 ~ location, data = bm_total,
                   ylim = c(0, 150))
 axis(1, at = c(1, 2), c('Outside', 'Under'), cex.axis = 2)
 axis(2, seq(0, 150, 50), cex.axis = 1.5, las = 1)
-mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 2, line = 4)
+mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 2.4, line = 4)
 text(2.2, 145, 'p = 0.054', cex = 1.8)
 
 # bm_dot = ggplot(bm_total, aes(x=location, y=weight_sum, fill = location)) +
@@ -328,7 +328,7 @@ grass_forb_boxplot = boxplot(subset(bm_lifeform_grass, location == 'away')$weigh
                            outline = F)
 axis(1, at = c(1.5, 3.5), c('Grass', 'Forb'), cex.axis = 2)
 axis(2, seq(0, 80, 20), cex.axis = 1.5, las = 1)
-mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 1.6, line = 4)
+mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 2.4, line = 4)
 legend('topright', c('Outside', 'Under'), pch = 15, col = c('orange', 'blue'), cex = 2)
 #### TTABS ####
 
@@ -530,7 +530,7 @@ bm_boxplot = plot(H ~ location, data = sc_diversity,
                   ylim = c(0, 12))
 axis(1, at = c(1, 2), c('Outside', 'Under'), cex.axis = 2)
 axis(2, seq(0, 12, 4), cex.axis = 1.5, las = 1)
-mtext(side = 2, 'Shannon Diversity (H)', cex = 1.6, line = 4)
+mtext(side = 2, 'Shannon Diversity (H)', cex = 2.4, line = 4)
 text(2.2, 11, 'p = 0.82', cex = 1.8)
 #### TTABS ####
 
