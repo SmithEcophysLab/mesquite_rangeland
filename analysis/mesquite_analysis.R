@@ -40,7 +40,7 @@ hist(lai_mean$lai_mean, breaks = seq(0, 2.5, 0.1),
      yaxt = 'n', xaxt = 'n', main = '')
 axis(1, seq(0, 2.5, 0.5), cex.axis = 1.5)
 axis(2, seq(0, 5, 1), cex.axis = 1.5, las = 1)
-mtext(side = 1, expression('Leaf Area Index (m'^'2' * ' m'^'-2' *')'), line = 4, cex = 2)
+mtext(side = 1, expression('Mesquite Leaf Area Index (m'^'2' * ' m'^'-2' *')'), line = 4, cex = 2)
 mtext(side = 2, expression('Frequency'), line = 3.5, cex = 2)
 #### TTABS ####
 
