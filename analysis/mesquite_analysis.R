@@ -1,6 +1,8 @@
 # Scipt for analyzing the mequite data
 ## The script proceeds as stated questions followed by the code to analyze the data
 ## in response to that stated question
+### TTABS figures can be found by searching for TTABS
+
 setwd("C:/Users/leah.ortiz/Documents/Git/mesquite_rangeland/analysis")
 
 ## install packages
@@ -30,6 +32,17 @@ lai_mean = summarise(lai_group_by_plot, lai_mean = mean(lai))
 hist(lai_mean$lai_mean, breaks = 5)
 mean(lai_mean$lai_mean)
 sd(lai_mean$lai_mean) / sqrt(40)
+
+#### TTABS ####
+par(oma = c(0,0,0,0), mar = c(5, 6, 1, 1))
+hist(lai_mean$lai_mean, breaks = seq(0, 2.5, 0.1), 
+     ylim = c(0, 5), xlab = '', ylab ='', col = rgb(0, 0.8, 0, 1),
+     yaxt = 'n', xaxt = 'n', main = '')
+axis(1, seq(0, 2.5, 0.5), cex.axis = 1.5)
+axis(2, seq(0, 5, 1), cex.axis = 1.5, las = 1)
+mtext(side = 1, expression('Mesquite Leaf Area Index (m'^'2' * ' m'^'-2' *')'), line = 4, cex = 2)
+mtext(side = 2, expression('Frequency'), line = 3.5, cex = 2)
+#### TTABS ####
 
 ##########################################################################################
 ### A1: LAI is fairly normal (center just below 1), but quite a big spread
@@ -135,6 +148,34 @@ t.test(subset(bm_total, location == 'under')$weight_sum,
        subset(bm_total, location == 'away')$weight_sum,
        paired = T)
 
+#### TTABS ####
+par(oma = c(0, 2, 1, 1))
+bm_boxplot = plot(weight_sum * 4 ~ location, data = bm_total,
+                  col = c('orange', 'blue'),
+                  outcol = c('orange', 'blue'),
+                  outpch = 16,
+                  yaxt = 'n', xaxt = 'n',
+                  ylab ='', xlab = '',
+                  ylim = c(0, 150))
+axis(1, at = c(1, 2), c('Outside', 'Under'), cex.axis = 2)
+axis(2, seq(0, 150, 50), cex.axis = 1.5, las = 1)
+mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 2.4, line = 4)
+text(2.2, 145, 'p = 0.054', cex = 1.8)
+
+# bm_dot = ggplot(bm_total, aes(x=location, y=weight_sum, fill = location)) +
+#                 geom_boxplot(fill = 'white') +
+#                 geom_dotplot(binaxis = 'y', stackdir = 'center') +
+#                 theme_minimal() +
+#                 labs(x = 'Location', y = 'Total Biomass (g)')
+# bm_dot + scale_fill_manual(values = c('blue', 'orange')) + 
+#          theme(legend.position="none") +
+#          scale_y_continuous(limit = c(0, 40)) +
+#          scale_x_discrete(labels = c('away' = 'Outside', 'under' = 'Under'))
+#          theme(axis.text.y = element_text(size = 20, color = 'black')) +
+#          theme(axis.text.x = element_text(size = 20, color = 'black'))
+#### TTABS ####
+
+
 ##########################################################################################
 ### A3a: Slightly lower under the mesquite, but not significantly different
 ##########################################################################################
@@ -183,7 +224,7 @@ t.test(subset(bm_lifeform_tree, location == 'under')$weight_sum,
        subset(bm_lifeform_tree, location == 'away')$weight_sum,
        paired = T) # nothing with trees (only one tree plot)
 
-#### grass/forb ratio
+#### grass ratio
 grass_ratio = bm_lifeform_grass$weight_sum / 
   rowSums(cbind(bm_lifeform_forb$weight_sum, bm_lifeform_grass$weight_sum, 
       bm_lifeform_tree$weight_sum))
@@ -193,6 +234,18 @@ grass_ratio_df = data.frame(bm_lifeform_grass[, c(1,2)], grass_ratio = grass_rat
 t.test(subset(grass_ratio_df, location == 'under')$grass_ratio,
        subset(grass_ratio_df, location == 'away')$grass_ratio,
        paired = T)
+
+#### forb ratio
+forb_ratio = bm_lifeform_forb$weight_sum / 
+  rowSums(cbind(bm_lifeform_forb$weight_sum, bm_lifeform_grass$weight_sum, 
+                bm_lifeform_tree$weight_sum))
+
+forb_ratio_df = data.frame(bm_lifeform_forb[, c(1,2)], forb_ratio = forb_ratio)
+
+t.test(subset(forb_ratio_df, location == 'under')$forb_ratio,
+       subset(forb_ratio_df, location == 'away')$forb_ratio,
+       paired = T)
+
 
 #### plot out grass ratio results
 grass_ratio_vioplot = plot(NULL, ylim = c(0, 1.2), xlim = c(0, 3), yaxt = 'n', 
@@ -232,6 +285,52 @@ axis(2, seq(0, 40, 10), las = 1)
 axis(1, c('grass', 'forb'), at = c(1.5, 3.5))
 mtext(side = 2, 'Biomass (g)', line = 3)
 legend('topright', c('Under', 'Away'), pch = 16, col = c('grey', 'yellow'))
+
+#### TTABS ####
+grass_ratio_boxplot = boxplot(grass_ratio * 100 ~ location, data = grass_ratio_df,
+                  col = c('orange', 'blue'),
+                  outcol = c('orange', 'blue'),
+                  outpch = 16,
+                  yaxt = 'n', xaxt = 'n',
+                  ylab ='', xlab = '',
+                  ylim = c(0, 115))
+axis(1, at = c(1, 2), c('Outside', 'Under'), cex.axis = 2)
+axis(2, seq(0, 100, 25), cex.axis = 1.5, las = 1)
+mtext(side = 2, 'Grass Biomass (%)', cex = 2.4, line = 4)
+text(2.2, 109, 'p < 0.05', cex = 1.8)
+#### TTABS ####
+
+#### TTABS ####
+forb_ratio_boxplot = boxplot(forb_ratio * 100 ~ location, data = forb_ratio_df,
+                              col = c('orange', 'blue'),
+                              outcol = c('orange', 'blue'),
+                              outpch = 16,
+                              yaxt = 'n', xaxt = 'n',
+                              ylab ='', xlab = '',
+                              ylim = c(0, 115))
+axis(1, at = c(1, 2), c('Outside', 'Under'), cex.axis = 2)
+axis(2, seq(0, 100, 25), cex.axis = 1.5, las = 1)
+mtext(side = 2, 'Forb Biomass (%)', cex = 2.4, line = 4)
+text(2.2, 109, 'p < 0.05', cex = 1.8)
+#### TTABS ####
+
+#### TTABS ####
+grass_forb_boxplot = boxplot(subset(bm_lifeform_grass, location == 'away')$weight_sum * 4,
+                            subset(bm_lifeform_grass, location == 'under')$weight_sum * 4,
+                            subset(bm_lifeform_forb, location == 'away')$weight_sum * 4,
+                            subset(bm_lifeform_forb, location == 'under')$weight_sum * 4,
+                           col = c('orange', 'blue'),
+                           outcol = c('orange', 'blue'),
+                           outpch = 16,
+                           yaxt = 'n', xaxt = 'n',
+                           ylab ='', xlab = '',
+                           ylim = c(0, 80),
+                           outline = F)
+axis(1, at = c(1.5, 3.5), c('Grass', 'Forb'), cex.axis = 2)
+axis(2, seq(0, 80, 20), cex.axis = 1.5, las = 1)
+mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 2.4, line = 4)
+legend('topright', c('Outside', 'Under'), pch = 15, col = c('orange', 'blue'), cex = 2)
+#### TTABS ####
 
 ##########################################################################################
 ### A3b: less grass and more forbs under the mesquite
@@ -420,6 +519,20 @@ t.test(subset(sc_diversity, location == 'under')$H,
        paired = T)
 hist(sc_diversity$H) # no difference
 plot(H ~ location, sc_diversity)
+
+#### TTABS ####
+bm_boxplot = plot(H ~ location, data = sc_diversity,
+                  col = c('orange', 'blue'),
+                  outcol = c('orange', 'blue'),
+                  outpch = 16,
+                  yaxt = 'n', xaxt = 'n',
+                  ylab ='', xlab = '',
+                  ylim = c(0, 12))
+axis(1, at = c(1, 2), c('Outside', 'Under'), cex.axis = 2)
+axis(2, seq(0, 12, 4), cex.axis = 1.5, las = 1)
+mtext(side = 2, 'Shannon Diversity (H)', cex = 2.4, line = 4)
+text(2.2, 11, 'p = 0.82', cex = 1.8)
+#### TTABS ####
 
 ##########################################################################################
 ### A6b: diversity is the same under the mesquite
