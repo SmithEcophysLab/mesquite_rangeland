@@ -3,17 +3,23 @@
 ## in response to that stated question
 ### TTABS figures can be found by searching for TTABS
 
-setwd("C:/Users/leah.ortiz/Documents/Git/mesquite_rangeland/analysis")
-
-## install packages
-install.packages('lme4')
-
 ## load libraries
 library(tidyverse)
 library(vioplot)
 library(lme4)
 library(car)
 library(emmeans)
+
+## ggplot theme
+th = theme(legend.position="none", 
+           axis.title.y=element_text(size=rel(1.5), colour = 'black'),
+           axis.title.x=element_text(size=rel(1.5), colour = 'black'),
+           axis.text.x=element_text(size=rel(1.5), colour = 'black'),
+           axis.text.y=element_text(size=rel(1.5), colour = 'black'),
+           panel.background = element_rect(fill = 'white', colour = 'black'),
+           panel.grid.major = element_line(colour = "grey"),
+           #axis.line = element_line(colour = 'black'),
+           strip.text = element_text(size=rel(1)))
 
 ## read in data
 sm = read.csv("../data/sm_clean.csv") # soil moisture
@@ -35,14 +41,28 @@ sd(lai_mean$lai_mean) / sqrt(40)
 
 #### TTABS ####
 par(oma = c(0,0,0,0), mar = c(5, 6, 1, 1))
-hist(lai_mean$lai_mean, breaks = seq(0, 2.5, 0.1), 
-     ylim = c(0, 5), xlab = '', ylab ='', col = rgb(0, 0.8, 0, 1),
+hist(lai_mean$lai_mean, breaks = seq(0, 2.5, 0.5), 
+     ylim = c(0, 20), xlab = '', ylab ='', col = 'darkgreen',
      yaxt = 'n', xaxt = 'n', main = '')
 axis(1, seq(0, 2.5, 0.5), cex.axis = 1.5)
-axis(2, seq(0, 5, 1), cex.axis = 1.5, las = 1)
+axis(2, seq(0, 20, 4), cex.axis = 1.5, las = 1)
 mtext(side = 1, expression('Mesquite Leaf Area Index (m'^'2' * ' m'^'-2' *')'), line = 4, cex = 2)
 mtext(side = 2, expression('Frequency'), line = 3.5, cex = 2)
 #### TTABS ####
+
+lai_histogram = ggplot(data = lai_mean, aes(x = lai_mean)) +
+  theme(legend.position="none", 
+        axis.title.y=element_text(size=rel(3), colour = 'black'),
+        axis.title.x=element_text(size=rel(2.5), colour = 'black'),
+        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
+        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        panel.background = element_rect(fill = 'white', colour = 'black'),
+        panel.grid.major = element_line(colour = "grey"),
+        #axis.line = element_line(colour = 'black'),
+        strip.text = element_text(size=rel(1))) +
+  geom_histogram(fill = c('grey'), colour = 'black', binwidth = 0.25) +
+  ylab('Count') +
+  xlab(expression('Mesquite Leaf Area Index (m'^'2' * ' m'^'-2' *')'))
 
 ##########################################################################################
 ### A1: LAI is fairly normal (center just below 1), but quite a big spread
@@ -107,13 +127,36 @@ sm_vioplot_date = vioplot(subset(sm, location == 'under' & date == sm_dates[1])$
                      subset(sm, location == 'under' & date == sm_dates[8])$vwc, 
                      subset(sm, location == 'away' & date == sm_dates[8])$vwc,
                      add = T,
-                     col = rep(c('grey', 'yellow'), times = 8),
+                     col = rep(c('darkgreen', 'yellow'), times = 8),
                      ylab = '', xlab = '')
 axis(2, seq(0, 40, 10), las = 1)
 axis(1, seq(1, 8, 1), at = seq(1.5, 15.5, 2))
 mtext(side = 1, 'Measurement Period', line = 3)
 mtext(side = 2, 'VWC (%)', line = 3)
 legend('topright', c('Under', 'Away'), pch = 16, col = c('grey', 'yellow'))
+
+sm_boxplot = ggplot(data = sm, aes(x = location, y = vwc)) +
+  theme(legend.position="none", 
+        axis.title.y=element_text(size=rel(3), colour = 'black'),
+        axis.title.x=element_text(size=rel(3), colour = 'black'),
+        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
+        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        panel.background = element_rect(fill = 'white', colour = 'black'),
+        panel.grid.major = element_line(colour = "grey"),
+        #axis.line = element_line(colour = 'black'),
+        strip.text = element_text(size=rel(1))) +
+  geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
+  ylab('Soil water content (%)') +
+  xlab('') +
+  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+
+sm$spot = paste(sm$plot, sm$location, sep = '_')
+sm$plotfac = as.factor(sm$plot)
+hist(sm$vwc)
+sm_lmer = lmer(vwc ~ location * date + (1|plotfac) + (1|spot), data = sm)
+summary(sm_lmer)
+plot(resid(sm_lmer) ~ fitted(sm_lmer))
+Anova(sm_lmer)
 
 ##########################################################################################
 ### A2: It's wetter outside of the mesquite area, but biggest difference in wet times
@@ -162,6 +205,31 @@ axis(2, seq(0, 150, 50), cex.axis = 1.5, las = 1)
 mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 2.4, line = 4)
 text(2.2, 145, 'p = 0.054', cex = 1.8)
 
+bm_boxplot = ggplot(data = bm_total, aes(x = location, y = weight_sum * 4)) +
+  theme(legend.position="none", 
+        axis.title.y=element_text(size=rel(3), colour = 'black'),
+        axis.title.x=element_text(size=rel(3), colour = 'black'),
+        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
+        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        panel.background = element_rect(fill = 'white', colour = 'black'),
+        panel.grid.major = element_line(colour = "grey"),
+        #axis.line = element_line(colour = 'black'),
+        strip.text = element_text(size=rel(1))) +
+  geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
+  ylab(expression('Understory Biomass (g m'^'-2' *')')) +
+  xlab('') +
+  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+
+bm_total$spot = paste(bm_total$plot, bm_total$location, sep = '_')
+bm_total$plotfac = as.factor(bm_total$plot)
+hist(log(bm_total$weight_sum + 0.01))
+hist(bm_total$weight_sum)
+bm_total_lmer = lmer(log(weight_sum + 0.01) ~ location + (1|plotfac), data = bm_total)
+summary(bm_total_lmer)
+plot(resid(bm_total_lmer) ~ fitted(bm_total_lmer))
+Anova(bm_total_lmer)
+emmeans(bm_total_lmer, ~location)
+
 # bm_dot = ggplot(bm_total, aes(x=location, y=weight_sum, fill = location)) +
 #                 geom_boxplot(fill = 'white') +
 #                 geom_dotplot(binaxis = 'y', stackdir = 'center') +
@@ -177,7 +245,7 @@ text(2.2, 145, 'p = 0.054', cex = 1.8)
 
 
 ##########################################################################################
-### A3a: Slightly lower under the mesquite, but not significantly different
+### A3a: Lower under the mesquite
 ##########################################################################################
 
 ##########################################################################################
@@ -331,6 +399,46 @@ axis(2, seq(0, 80, 20), cex.axis = 1.5, las = 1)
 mtext(side = 2, expression('Understory Biomass (g m'^'-2' *')'), cex = 2.4, line = 4)
 legend('topright', c('Outside', 'Under'), pch = 15, col = c('orange', 'blue'), cex = 2)
 #### TTABS ####
+
+forb_percent_boxplot = ggplot(data = forb_ratio_df, aes(x = location, y = forb_ratio * 100)) +
+  theme(legend.position="none", 
+        axis.title.y=element_text(size=rel(3), colour = 'black'),
+        axis.title.x=element_text(size=rel(3), colour = 'black'),
+        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
+        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        panel.background = element_rect(fill = 'white', colour = 'black'),
+        panel.grid.major = element_line(colour = "grey"),
+        #axis.line = element_line(colour = 'black'),
+        strip.text = element_text(size=rel(1))) +
+  geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
+  ylab(expression('C'[3] * ' Forb Biomass (%)')) +
+  xlab('') +
+  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+
+grass_percent_boxplot = ggplot(data = forb_ratio_df, aes(x = location, y =  100 - (forb_ratio * 100))) +
+  theme(legend.position="none", 
+        axis.title.y=element_text(size=rel(3), colour = 'black'),
+        axis.title.x=element_text(size=rel(3), colour = 'black'),
+        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
+        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        panel.background = element_rect(fill = 'white', colour = 'black'),
+        panel.grid.major = element_line(colour = "grey"),
+        #axis.line = element_line(colour = 'black'),
+        strip.text = element_text(size=rel(1))) +
+  geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
+  ylab(expression('C'[4] * ' Grass Biomass (%)')) +
+  xlab('') +
+  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+
+forb_ratio_df$spot = paste(forb_ratio_df$plot, forb_ratio_df$location, sep = '_')
+forb_ratio_df$plotfac = as.factor(forb_ratio_df$plot)
+hist(log(forb_ratio_df$forb_ratio + 0.01))
+hist(forb_ratio_df$forb_ratio)
+forb_ratio_lmer = lmer(log(forb_ratio + 0.01) ~ location + (1|plotfac), data = forb_ratio_df)
+summary(forb_ratio_lmer)
+plot(resid(forb_ratio_lmer) ~ fitted(forb_ratio_lmer))
+Anova(forb_ratio_lmer)
+emmeans(forb_ratio_lmer, ~location)
 
 ##########################################################################################
 ### A3b: less grass and more forbs under the mesquite
@@ -533,6 +641,32 @@ axis(2, seq(0, 12, 4), cex.axis = 1.5, las = 1)
 mtext(side = 2, 'Shannon Diversity (H)', cex = 2.4, line = 4)
 text(2.2, 11, 'p = 0.82', cex = 1.8)
 #### TTABS ####
+
+diversity_boxplot = ggplot(data = sc_diversity, aes(x = location, y = H)) +
+  theme(legend.position="none", 
+        axis.title.y=element_text(size=rel(3), colour = 'black'),
+        axis.title.x=element_text(size=rel(3), colour = 'black'),
+        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
+        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        panel.background = element_rect(fill = 'white', colour = 'black'),
+        panel.grid.major = element_line(colour = "grey"),
+        #axis.line = element_line(colour = 'black'),
+        strip.text = element_text(size=rel(1))) +
+  geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
+  ylab('Shannon Diversity (H)') +
+  xlab('') +
+  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+
+sc_diversity$spot = paste(sc_diversity$plot, sc_diversity$location, sep = '_')
+sc_diversity$plotfac = as.factor(sc_diversity$plot)
+hist(log(sc_diversity$H + 0.01))
+hist(sc_diversity$H)
+H_lmer = lmer(log(H + 0.01) ~ location + (1|plotfac), data = sc_diversity)
+summary(H_lmer)
+plot(resid(H_lmer) ~ fitted(H_lmer))
+Anova(H_lmer)
+emmeans(H_lmer, ~location)
+
 
 ##########################################################################################
 ### A6b: diversity is the same under the mesquite
