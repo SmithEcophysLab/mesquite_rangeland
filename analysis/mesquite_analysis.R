@@ -137,10 +137,10 @@ legend('topright', c('Under', 'Away'), pch = 16, col = c('grey', 'yellow'))
 
 sm_boxplot = ggplot(data = sm, aes(x = location, y = vwc)) +
   theme(legend.position="none", 
-        axis.title.y=element_text(size=rel(3), colour = 'black'),
-        axis.title.x=element_text(size=rel(3), colour = 'black'),
-        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
-        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        axis.title.y=element_text(size=rel(4), colour = 'black'),
+        axis.title.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.y=element_text(size=rel(3), colour = 'black'),
         panel.background = element_rect(fill = 'white', colour = 'black'),
         panel.grid.major = element_line(colour = "grey"),
         #axis.line = element_line(colour = 'black'),
@@ -148,7 +148,7 @@ sm_boxplot = ggplot(data = sm, aes(x = location, y = vwc)) +
   geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
   ylab('Soil water content (%)') +
   xlab('') +
-  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+  scale_x_discrete(labels = c('away' = 'Outside', 'under' = 'Under'))
 
 sm$spot = paste(sm$plot, sm$location, sep = '_')
 sm$plotfac = as.factor(sm$plot)
@@ -207,18 +207,18 @@ text(2.2, 145, 'p = 0.054', cex = 1.8)
 
 bm_boxplot = ggplot(data = bm_total, aes(x = location, y = weight_sum * 4)) +
   theme(legend.position="none", 
-        axis.title.y=element_text(size=rel(3), colour = 'black'),
-        axis.title.x=element_text(size=rel(3), colour = 'black'),
-        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
-        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        axis.title.y=element_text(size=rel(4), colour = 'black'),
+        axis.title.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.y=element_text(size=rel(3), colour = 'black'),
         panel.background = element_rect(fill = 'white', colour = 'black'),
         panel.grid.major = element_line(colour = "grey"),
         #axis.line = element_line(colour = 'black'),
         strip.text = element_text(size=rel(1))) +
   geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
-  ylab(expression('Understory Biomass (g m'^'-2' *')')) +
+  ylab(expression('Understory AGB (g m'^'-2' *')')) +
   xlab('') +
-  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+  scale_x_discrete(labels = c('away' = 'Outside', 'under' = 'Under'))
 
 bm_total$spot = paste(bm_total$plot, bm_total$location, sep = '_')
 bm_total$plotfac = as.factor(bm_total$plot)
@@ -402,10 +402,10 @@ legend('topright', c('Outside', 'Under'), pch = 15, col = c('orange', 'blue'), c
 
 forb_percent_boxplot = ggplot(data = forb_ratio_df, aes(x = location, y = forb_ratio * 100)) +
   theme(legend.position="none", 
-        axis.title.y=element_text(size=rel(3), colour = 'black'),
-        axis.title.x=element_text(size=rel(3), colour = 'black'),
-        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
-        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        axis.title.y=element_text(size=rel(4), colour = 'black'),
+        axis.title.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.y=element_text(size=rel(3), colour = 'black'),
         panel.background = element_rect(fill = 'white', colour = 'black'),
         panel.grid.major = element_line(colour = "grey"),
         #axis.line = element_line(colour = 'black'),
@@ -413,14 +413,14 @@ forb_percent_boxplot = ggplot(data = forb_ratio_df, aes(x = location, y = forb_r
   geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
   ylab(expression('C'[3] * ' Forb Biomass (%)')) +
   xlab('') +
-  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+  scale_x_discrete(labels = c('away' = 'Outside', 'under' = 'Under'))
 
 grass_percent_boxplot = ggplot(data = forb_ratio_df, aes(x = location, y =  100 - (forb_ratio * 100))) +
   theme(legend.position="none", 
-        axis.title.y=element_text(size=rel(3), colour = 'black'),
-        axis.title.x=element_text(size=rel(3), colour = 'black'),
-        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
-        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        axis.title.y=element_text(size=rel(4), colour = 'black'),
+        axis.title.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.y=element_text(size=rel(3), colour = 'black'),
         panel.background = element_rect(fill = 'white', colour = 'black'),
         panel.grid.major = element_line(colour = "grey"),
         #axis.line = element_line(colour = 'black'),
@@ -428,7 +428,7 @@ grass_percent_boxplot = ggplot(data = forb_ratio_df, aes(x = location, y =  100 
   geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
   ylab(expression('C'[4] * ' Grass Biomass (%)')) +
   xlab('') +
-  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+  scale_x_discrete(labels = c('away' = 'Outside', 'under' = 'Under'))
 
 forb_ratio_df$spot = paste(forb_ratio_df$plot, forb_ratio_df$location, sep = '_')
 forb_ratio_df$plotfac = as.factor(forb_ratio_df$plot)
@@ -644,10 +644,10 @@ text(2.2, 11, 'p = 0.82', cex = 1.8)
 
 diversity_boxplot = ggplot(data = sc_diversity, aes(x = location, y = H)) +
   theme(legend.position="none", 
-        axis.title.y=element_text(size=rel(3), colour = 'black'),
-        axis.title.x=element_text(size=rel(3), colour = 'black'),
-        axis.text.x=element_text(size=rel(2.5), colour = 'black'),
-        axis.text.y=element_text(size=rel(2), colour = 'black'),
+        axis.title.y=element_text(size=rel(4), colour = 'black'),
+        axis.title.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.x=element_text(size=rel(4), colour = 'black'),
+        axis.text.y=element_text(size=rel(3), colour = 'black'),
         panel.background = element_rect(fill = 'white', colour = 'black'),
         panel.grid.major = element_line(colour = "grey"),
         #axis.line = element_line(colour = 'black'),
@@ -655,7 +655,7 @@ diversity_boxplot = ggplot(data = sc_diversity, aes(x = location, y = H)) +
   geom_boxplot(fill = c('yellow', 'grey'), lwd = 4) +
   ylab('Shannon Diversity (H)') +
   xlab('') +
-  scale_x_discrete(labels = c('away' = 'Away from mesquite', 'under' = 'Under mesquite'))
+  scale_x_discrete(labels = c('away' = 'Outside', 'under' = 'Under'))
 
 sc_diversity$spot = paste(sc_diversity$plot, sc_diversity$location, sep = '_')
 sc_diversity$plotfac = as.factor(sc_diversity$plot)
